@@ -308,6 +308,12 @@ class DurationFilter(Filter):
     field_class = forms.DurationField
 
 
+class ImageFilter(Filter):
+    field_class = forms.ImageField
+
+class FileFilter(Filter):
+    field_class = forms.FileField
+
 class QuerySetRequestMixin:
     """
     Add callable functionality to filters that support the ``queryset``

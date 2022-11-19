@@ -23,6 +23,8 @@ from .filters import (
     NumberFilter,
     TimeFilter,
     UUIDFilter,
+    ImageFilter,
+    FileFilter
 )
 from .utils import get_all_model_fields, get_model_field, resolve_field, try_dbfield
 
@@ -121,6 +123,8 @@ FILTER_FOR_DBFIELD_DEFAULTS = {
     models.GenericIPAddressField: {"filter_class": CharFilter},
     models.CommaSeparatedIntegerField: {"filter_class": CharFilter},
     models.UUIDField: {"filter_class": UUIDFilter},
+    models.ImageField: {"filter_class": ImageFilter},
+    models.FileField: {"filter_class": FileFilter}
     # Forward relationships
     models.OneToOneField: {
         "filter_class": ModelChoiceFilter,
